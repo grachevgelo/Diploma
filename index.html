@@ -8,6 +8,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div class="_hidden">
+        <div class="popup-container">
+            <div class="popup-content">
+                <header class="popup-header">
+                    <h3 class="popup-title">Ваш фидбек</h3>
+                </header>
+                <div class="popup-body">
+                    <form class="popup-list-of-questions">
+                        <div class="popup-question">
+                            <label class="popup-label-how-often" for="how-often">Как часто вы заходите на сайт?</label>
+                            <select id="how-often" class="popup-field-how-often" name="how-often" required>
+                                <option class="popup-options-how-often">Почти каждый день</option>
+                                <option class="popup-options-how-often">Раз в месяц</option>
+                                <option class="popup-options-how-often">Раз в неделю</option>
+                                <option class="popup-options-how-often">Где я?</option>
+                            </select>
+                        </div>
+                        <div class="popup-question">
+                            <div class="popup-question-title">
+                            <span class="popup-name">Вы подписаны на e-mail рассылку</span>
+                                </div>
+                            <label class="popup-label-do-you-sign-up">
+                                <input class="popup-field-do-you-sign-up" type="radio" name="radio-group-do-you-sign-up">
+                                <span class="popup-text-do-you-sign-up"> Да</span>
+                            </label>
+                            <label class="popup-label-do-you-sign-up">
+                                <input class="popup-field-do-you-sign-up" type="radio" name="radio-group-do-you-sign-up">
+                                <span class="popup-text-do-you-sign-up">Нет</span>
+                            </label>
+                        </div>
+                        <div class="popup-question">
+                            <label class="popup-label-anything-else" for="anything-else">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+                            <textarea id="anything-else" class="popup-field-anything-else" placeholder="Может, больше рецептов?" name="anything-else" required></textarea>
+
+                        </div>
+                        <div class="popup-footer">
+                            <button class="popup-send-button"><span class="popup-button-label">Отправить</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button class="popup-close-button" type="button">Закрыть окно</button>
+        </div>
+    </div>
     <header class="noemi-header">
         <div class="header-content">
             <div class="header-logo">
@@ -50,7 +94,7 @@
         <div class="trends-list">
             <div class="trends-content">
 
-                <img src="images/trend1.jpg" class="trends-pics" alt="">
+                <img src="images/trend1.jpg" class="trends-pics" alt="Цветы в горшках">
                 <div class="trends-body">
                     <ul class="trends-tags-list">
                         <li class="trends-tags-option">
@@ -65,7 +109,7 @@
 
             </div>
             <div class="trends-content">
-                <img src="images/trend2.jpg" class="trends-pics" alt="">
+                <img src="images/trend2.jpg" class="trends-pics" alt="Гора разных сыров">
                 <div class="trends-body">
                     <ul class="trends-tags-list">
                         <li class="trends-tags-option">
@@ -76,7 +120,7 @@
                 </div>
             </div>
             <div class="trends-content">
-                <img src="images/trend3.jpg" class="trends-pics" alt="">
+                <img src="images/trend3.jpg" class="trends-pics" alt="Девушка вглядывается в даль">
                 <div class="trends-body">
                     <ul class="trends-tags-list">
                         <li class="trends-tags-option">
@@ -90,7 +134,7 @@
                 </div>
             </div>
             <div class="trends-content">
-                <img src="images/trend4.jpg" class="trends-pics" alt="">
+                <img src="images/trend4.jpg" class="trends-pics" alt="Лимоны в ящике">
                 <div class="trends-body">
                     <ul class="trends-tags-list">
                         <li class="trends-tags-option">
@@ -379,7 +423,11 @@
         <div class="shop-list">
             <div class="shop-content">
                 <div class="shop-product-header">
-                    <img src="images/shop-item-desk1.jpg" class="shop-product-pics" alt="">
+                    <picture>
+                        <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet1.jpg">
+                        <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+                        <img src="images/shop-item-desk1.jpg" class="shop-product-pics" alt="Подушка с принтом">
+                    </picture>
                 </div>
                 <div class="shop-product-body">
                     <div class="shop-product-title">
@@ -406,7 +454,11 @@
             </div>
             <div class="shop-content">
                 <div class="shop-product-header">
-                    <img src="images/shop-item-desk2.jpg" class="shop-product-pics" alt="">
+                    <picture>
+                        <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet2.jpg">
+                        <source media="(max-width: 640px)" srcset="images/shop-item-mobilet2.jpg">
+                        <img src="images/shop-item-desk2.jpg" class="shop-product-pics" alt="Кукла зайчтк на столе">
+                    </picture>
                 </div>
                 <div class="shop-product-body">
                     <div class="shop-product-title">
@@ -429,7 +481,11 @@
             </div>
             <div class="shop-content">
                 <div class="shop-product-header">
-                    <img src="images/shop-item-desk3.jpg" class="shop-product-pics" alt="">
+                    <picture>
+                        <source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet3.jpg">
+                        <source media="(max-width: 640px)" srcset="images/shop-item-mobilet3.jpg">
+                        <img src="images/shop-item-desk3.jpg" class="shop-product-pics" alt="Пример шестиугольной рамки">
+                    </picture>
                 </div>
                 <div class="shop-product-body">
                     <div class="shop-product-title">
@@ -455,8 +511,8 @@
 
             </div>
 
-            </div>
-</section>
+        </div>
+    </section>
     <footer class="noemi-footer">
         <div class="footer-soclinks">
             <ul class="soclinks-list">
