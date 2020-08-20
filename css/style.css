@@ -18,7 +18,199 @@
     font-style: normal;
 }
 
+/*ѕќѕјѕ*/
+
+._hidden {
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 3;
+}
+
+
+.popup-container {
+    max-width: 390px;
+    min-height: 590px;
+    margin: auto;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.popup-title {
+    margin: 50px 0 25px 0;
+    text-align: center;
+    font-family: Open Sans-Bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+    .popup-title::after {
+        content: "";
+        display: block;
+        position: relative;
+        top: 13px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 68px;
+        height: 3px;
+        background-color: #e1d9bd;
+    }
+
+.popup-body {
+    box-sizing: border-box;
+}
+
+.popup-list-of-questions {
+    margin: 0 30px 0 30px;
+}
+
+.popup-question{
+    margin-bottom: 25px;
+}
+
+.popup-question:nth-child(n+3) {
+    margin-bottom: 20px;
+}
+
+.popup-question-title {
+    margin-bottom: 10px;
+}
+
+.popup-label-how-often,
+.popup-label-anything-else,
+.popup-name {
+    font-size: 13px;
+}
+
+.popup-field-how-often {
+    margin-top: 10px;
+    height: 50px;
+    background-image: url("../svg/form-arrows.svg");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10px 17px;
+    color: #939594;
+}
+
+    .popup-field-how-often:first-child {
+        color: #939594;
+    }
+
+
+
+.popup-field-how-often,
+.popup-field-anything-else {
+    box-sizing: border-box;
+    width: 330px;
+    height: 50px;
+    border: none;
+    padding: 15px;
+    font-size: 13px;
+    background-color: #f4f7f6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.popup-options-how-often {
+    color: #000000;
+}
+
+.popup-field-anything-else {
+    margin-top: 10px;
+    height: 130px;
+}
+
+.popup-text-do-you-sign-up {
+    font-size: 13px;
+}
+
+.popup-text-do-you-sign-up::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../svg/form-empty-circle.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+}
+
+
+.popup-label-do-you-sign-up {
+    position: relative;
+    margin-right: 15px;
+}
+
+.popup-field-do-you-sign-up {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    width: 1px;
+}
+
+.popup-field-do-you-sign-up:checked ~ .popup-text-do-you-sign-up::before {
+    background-image: url("../svg/form-circle.svg");
+}
+    
+    
+    
+    .popup-send-button {
+    box-sizing: border-box;
+    width: 330px;
+    margin-bottom: 50px;
+    height: 50px;
+    padding: 15px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #b59f5b;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.popup-button-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Open Sans-Bold;
+}
+
+.popup-close-button {
+    background-color: transparent;
+    background-image: url("../svg/form-x.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+    border: none;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -2em;
+    right: 0;
+}
+
+
+
+
+
 /* шапка */
+
+
 
 .noemi-header {
     margin-bottom: 64px;
@@ -98,8 +290,8 @@
 }
 
 .header-title {
-    display: inherit;
-    width: 800px;
+    display: block;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -121,6 +313,9 @@
 
 
 /*верхн€€ карусель*/
+
+
+
 .trends-carousel {
     margin-right: auto;
     margin-left: auto;
@@ -190,7 +385,6 @@
 
 
 .trends-body {
-    /*display: inherit;*/
     box-sizing: border-box;
     position: absolute;
     left: 0;
@@ -226,11 +420,13 @@
     text-transform: uppercase;
     font-size: 20px;
     padding: 0 35px 36px 32px;
+    word-wrap: break-word;
 }
 
 
 .trends-pics {
-    max-width: 100%;
+    width: 100%;
+    object-fit: fill;
 }
 
 
@@ -248,9 +444,6 @@
     display: flex;
     margin-right: auto;
     margin-left: auto;
-
-
-    border: 1px solid purple;
 }
 
 
@@ -270,8 +463,8 @@
     }
 
 .posts-preview {
-    width: 381px;
-    height: 292px;
+    max-width: 381px;
+    max-height: 292px;
 }
 
 .posts-content {
@@ -325,7 +518,6 @@
 /* боковое меню */
 
 .noemi-side-menu {
-    /*width: 19%;*/
     width: 272px;
     display: inherit;
     flex-direction: column;
@@ -434,15 +626,15 @@
 
 .subscription-button {
     box-sizing: border-box;
-    margin-top: 16px;
-    height: 50px;
-    padding: 15px;
-    border: none;
     color: #ffffff;
     cursor: pointer;
     background-color: #b59f5b;
     -webkit-appearance: none;
     -moz-appearance: none;
+    margin-top: 16px;
+    height: 50px;
+    padding: 15px;
+    border: none;
 }
 
 .subscription-button-text {
@@ -524,8 +716,6 @@
     padding: 0 15px 0 15px;
     display: flex;
     flex-wrap: wrap;
-
-    /*border: 1px solid black;*/
 }
 
 .shop-info {
@@ -568,7 +758,6 @@
     position: relative;
     width: 31.6%;
     margin-right: 5%;
-    /*border: 1px solid black;*/
 }
 
     .shop-content:last-child {
@@ -581,14 +770,13 @@
 .shop-product-header {
     height: 200px;
     padding: 0 23px 25px 23px;
-    /*border: 1px solid red;*/
 }
 
 
 .shop-product-body {
     box-sizing: border-box;
     position: absolute;
-    height: 265px;
+    min-height: 265px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -601,6 +789,10 @@
     font-family: Open Sans-Bold;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+.shop-product-description {
+    word-wrap: break-word;
 }
 
 .shop-product-text {
@@ -628,7 +820,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /*border: 1px solid green;*/
+    align-items: center;
 }
 
 .shop-product-price {
@@ -636,7 +828,6 @@
     font-size: 20px;
     line-height: 1;
     font-weight: 700;
-    /*border: 1px solid yellow;*/
 }
 
 
@@ -645,7 +836,6 @@
     text-decoration: line-through;
     font-size: 14px;
     margin-bottom: 5px;
-    /*border: 1px solid blue;*/
 }
 
 .shop-product-button {
@@ -673,8 +863,13 @@
     color: #ffffff;
     font-size: 14px;
 }
-/* 
-подножье*/
+
+
+
+/* подножье*/
+
+
+
 .noemi-footer {
     width: 1170px;
     padding-left: 15px;
@@ -759,15 +954,31 @@
 
 @media (min-width: 641px) and (max-width: 1199px) {
 
+    /*ѕќѕјѕ media (min-width: 641px) and (max-width: 1199px)*/
+
+    .popup-close-button {
+        background-size: 28px;
+        width: 2.2em;
+        height: 2.2em;
+        top: -3em;
+    }
+
+    .popup-title {
+        font-size: 1.2rem;
+    }
+
+
+    /*шапка media (min-width: 641px) and (max-width: 1199px)*/
+
     .noemi-header {
         background-image: url("../images/banner-bg-tablet.jpg");
+        min-width: 772px;
     }
 
     .header-content {
         width: 700px;
         padding: 0 36px 0 36px;
     }
-
     .header-img {
         max-width: 160px;
     }
@@ -821,20 +1032,23 @@
     }
 
     .menu-list {
-        display: none; /*изменено*/
+        display: none;
     }
 
     .header-name {
-        font-size: 40px; /*изменено*/
+        font-size: 40px;
     }
 
 
     /*верхн€€ карусель media (min-width: 641px) and (max-width: 1199px)*/
 
-
+    .trends-carousel {
+        width: 700px;
+        padding: 0 36px 0 36px;
+    }
 
     .trends-title {
-        font-size: 18px; /*изменено*/
+        font-size: 18px;
     }
 
     .trends-list {
@@ -850,13 +1064,8 @@
         min-height: 248px;
     }
 
-    .trends-pics {
-        max-width: 100%;
-        height: auto;
-    }
-
     .trends-content:nth-child(even) {
-        margin-right: 0; /*изменено*/
+        margin-right: 0;
     }
 
     .trends-content::after {
@@ -871,7 +1080,7 @@
     }
 
     .trends-posts-name {
-        font-size: 17px; /*изменено*/
+        font-size: 17px;
     }
 
 
@@ -883,23 +1092,28 @@
 
     .noemi-main {
         width: 700px;
-        padding: 0 36px 0 36px; /*изменил первые 3 поз*/
+        padding: 0 36px 0 36px;
         margin-bottom: 50px;
     }
 
 
     .noemi-posts {
-        margin-right: 36px; /*изменил 1 поз*/
+        margin-right: 36px;
         display: inherit;
     }
 
     .posts {
-        display: block; /*изменил 1 поз*/
+        display: block;
+    }
+
+    .posts-img {
+        width: 100%;
+        object-fit: fill;
     }
 
     .tags-list {
         margin-bottom: 15px;
-        margin-top: 16px; /*добавлена посл поз*/
+        margin-top: 16px;
     }
 
 
@@ -907,10 +1121,9 @@
 
     .shop-carousel {
         width: 700px;
-        padding: 0 36px 0 36px; /*изменил первые 2 поз*/
-        margin-top: 0; /*измнено*/
-        margin-bottom: 20px; /*измнено*/
-        /*border: 1px solid black;*/
+        padding: 0 36px 0 36px;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
 
@@ -921,15 +1134,14 @@
     }
 
     .shop-content {
-        min-height: 435px; /*изменено*/
-        width: 48.2%; /*48.2%*/
-        margin-right: 3.60%; /*изменено*/
-        margin-bottom: 30px; /*изменено*/
-        /*border: 1px solid black;*/
+        min-height: 435px;
+        width: 48.2%;
+        margin-right: 3.60%;
+        margin-bottom: 30px;
     }
 
         .shop-content:nth-child(even) {
-            margin-right: 0; /*изменено*/
+            margin-right: 0;
         }
 
     
@@ -937,12 +1149,41 @@
  /*подножье media (min-width: 641px) and (max-width: 1199px)*/
     .noemi-footer {
         width: 700px;
-        padding: 0 36px 0 36px; /*изменил первые 2 поз*/
+        padding: 0 36px 0 36px;
     }
 }
 
 
 @media (max-width: 640px) {
+
+    /*ѕќѕјѕ media (min-width: 640px)*/
+
+    .popup-container {
+        max-width: 330px;
+        max-height: 550px;
+    }
+
+
+    .popup-title {
+        margin: 30px 0 25px 0;
+        font-size: 1rem;
+    }
+
+    .popup-list-of-questions {
+        margin: 0 25px 0 25px;
+    }
+
+    .popup-field-how-often,
+    .popup-field-anything-else,
+    .popup-send-button {
+        width: 280px;
+    }
+
+    .popup-send-button {
+        margin-bottom: 30px;
+    }
+
+    /*шапка media (min-width: 640px)*/
 
     .noemi-header {
         background-image: url("../images/banner-mobile.jpg");
@@ -962,7 +1203,7 @@
     }
 
     .header-img {
-        width: 75vw;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1017,13 +1258,11 @@
 
     .menu-list {
         display: none;
-
     }
 
     .header-title {
         display: block;
         width: 270px;
-
     }
 
     .header-name {
@@ -1036,44 +1275,37 @@
 
 
     .trends-title {
-        font-size: 18px; /*изменено*/
+        font-size: 18px;
     }
 
     .trends-list {
+        min-width: 360px;
         display: block;
-        /*width: 100%;*/
-        /*flex-wrap: wrap;*/
     }
 
     .trends-content {
         width: 100%;
-        /*margin-right: 0.78%;*/
         margin-bottom: 3px;
         min-height: 230px;
     }
 
-    .trends-pics {
-        max-width: 100%;
-        height: auto;
-    }
+        .trends-content:nth-child(even) {
+            margin-right: 0;
+        }
 
-    .trends-content:nth-child(even) {
-        margin-right: 0; /*изменено*/
-    }
-
-    .trends-content::after {
-        content: "";
-        background-color: #000000;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0.45;
-    }
+        .trends-content::after {
+            content: "";
+            background-color: #000000;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.45;
+        }
 
     .trends-posts-name {
-        font-size: 17px; /*изменено*/
+        font-size: 17px;
     }
 
 
@@ -1085,7 +1317,7 @@
 
     .noemi-main {
         width: 330px;
-        padding: 0 15px 0 15px; 
+        padding: 0 15px 0 15px;
         margin-bottom: 40px;
         display: block;
     }
@@ -1094,54 +1326,73 @@
 
 
     .noemi-posts {
-        margin-right: 36px; /*изменил 1 поз*/
+        margin-right: 0;
         display: inherit;
     }
 
     .posts {
-        display: block; /*изменил 1 поз*/
+        display: block;
+    }
+
+    .posts-img {
+        width: 100%;
+        object-fit: fill;
     }
 
     .tags-list {
         margin-bottom: 15px;
-        margin-top: 16px; /*добавлена посл поз*/
+        margin-top: 16px;
     }
 
 
     /*подножье-карусель media (max-width: 640px)*/
 
     .shop-carousel {
-        width: 300px;
+        width: 330px;
         padding: 0 15px 0 15px;
         margin-top: 0;
         margin-bottom: 22px;
-        /*border: 1px solid black;*/
     }
 
 
     .shop-list {
-        /*width: 100%;*/
         display: block;
-        /*flex-wrap: wrap;*/
     }
 
     .shop-content {
         min-height: 490px;
         width: 100%;
-       /* margin-right: 3.60%;*/ 
-        margin-bottom: 20px; 
-        /*border: 1px solid black;*/
+        margin-bottom: 20px;
     }
 
         .shop-content:nth-child(even) {
-            margin-right: 0; 
+            margin-right: 0;
         }
 
+    .shop-product-header {
+        width: 280px;
+        height: 285px;
+        padding: 0;
+        margin: 0 auto 0 auto;
+    }
+
+
+    .shop-product-name {
+        font-size: 17px;
+    }
+
+    .shop-product-bottom {
+        margin-top: 25px;
+        
+
+    }
 
 
     /*подножье media (max-width: 640px)*/
+
+
     .noemi-footer {
         width: 330px;
-        padding: 0 15px 0 15px; 
+        padding: 0 15px 0 15px;
     }
 }
