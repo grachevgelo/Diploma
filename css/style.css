@@ -21,7 +21,7 @@
 /*оноюо*/
 
 ._hidden {
-    visibility: hidden;
+    /*visibility: hidden;*/
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
@@ -150,6 +150,7 @@
 .popup-label-do-you-sign-up {
     position: relative;
     margin-right: 15px;
+    font-size: 13px;
 }
 
 .popup-field-do-you-sign-up {
@@ -164,10 +165,10 @@
 .popup-field-do-you-sign-up:checked ~ .popup-text-do-you-sign-up::before {
     background-image: url("../svg/form-circle.svg");
 }
-    
-    
-    
-    .popup-send-button {
+
+
+
+.popup-send-button {
     box-sizing: border-box;
     width: 330px;
     margin-bottom: 50px;
@@ -681,7 +682,6 @@
     display: inline-flex;
     vertical-align: top;
     list-style-type: none;
-    padding: 7px 14px;
     margin-top: 6px;
     text-transform: uppercase;
     border-width: 3px;
@@ -690,6 +690,7 @@
 }
 
 .tag-sourse {
+    padding: 7px 14px;
     text-decoration: none;
     color: #000000;
     font-size: 12px;
